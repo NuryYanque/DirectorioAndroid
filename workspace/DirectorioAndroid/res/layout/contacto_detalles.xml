@@ -12,17 +12,27 @@
 		android:id="@+id/cont_descripcion"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"/>
-	<TextView
-		android:id="@+id/cont_phoneCasa"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"/>
-	<TextView
-		android:id="@+id/cont_phoneCel"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"/>
-	<TextView
-		android:id="@+id/cont_email"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"/>
 
+	<ListView
+	    android:id="@android:id/list"
+	    android:layout_width="fill_parent"
+	    android:layout_height="309dp" />
+   <LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+	<Button
+	    android:id="@+id/btEditar"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Editar" 
+	    android:onClick="editarContacto"/>
+
+	<Button
+	    android:id="@+id/btEliminar"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Eliminar" 
+	    android:onClick="eliminarContacto"/>
+	</LinearLayout>
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -17,6 +18,8 @@ public class ContactosList extends ListActivity {
 	protected SQLiteDatabase db;
 	protected Cursor cursor;
 	protected ListAdapter adapter;
+	
+	 private int requestCode = 1;
 	
     
     @Override
@@ -46,5 +49,10 @@ public class ContactosList extends ListActivity {
     	intent.putExtra("CONTACTO_ID", cursor.getInt(cursor.getColumnIndex("_id")));
     	startActivity(intent);
     }
-
+    
+    public void agregarContacto(View view)
+    {
+    	Intent i=new Intent(this, NuevoContactoActivity.class);
+    	startActivityForResult(i,requestCode);
+    }   
 }

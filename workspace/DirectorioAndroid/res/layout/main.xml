@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ocopa">"
 
-	<LinearLayout
-	    android:orientation="horizontal"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
-		<EditText
-			android:id="@+id/etBuscar"
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:layout_weight="1"
-			android:hint="Buscar contacto..."/>
-	
-		<Button
-			android:id="@+id/btBuscar"
-			android:text="Buscar"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:onClick="buscarContactos"/>
+        <EditText
+            android:id="@+id/etBuscar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Buscar contacto..." />
 
-	</LinearLayout>
+        <Button
+            android:id="@+id/btBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="buscarContactos"
+            android:text="Buscar" />
+    </LinearLayout>
 
-	<ListView
-		android:id="@android:id/list"
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"/>
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="129dp"
+        android:layout_weight="0.84" />
+	 <LinearLayout
+    	android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+   		<Button
+        android:id="@+id/btAniadir"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:text="Agregar"
+        android:onClick="agregarContacto" />
+    </LinearLayout>
 
 </LinearLayout>

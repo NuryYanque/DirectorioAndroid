@@ -23,6 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name="ContactosDetalles"></activity>
+        <activity android:name="NuevoContactoActivity"></activity>
+        <activity android:name="EditarContactoActivity"></activity>
     </application>
 
 </manifest>
